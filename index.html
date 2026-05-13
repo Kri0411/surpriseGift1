@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just You ✨</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #3b2f63, #ff758c);
+            overflow: hidden;
+        }
+
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center px-4">
+
+    <div
+        class="bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-3xl p-8 max-w-md w-full text-center text-white">
+
+        <h1 class="text-4xl font-extrabold mb-5 glow">
+            I Miss You...
+        </h1>
+
+        <p class="text-lg leading-relaxed text-gray-200 mb-6">
+            I miss your presence.<br>
+            I miss your voice.<br>
+            I miss your little talks, your warmth, your bond... <br><br>
+
+            Honestly, I miss <span class="font-semibold text-pink-300">YOU.</span>
+        </p>
+
+        <div class="text-5xl mb-6 animate-pulse">
+            ✨🌙💭
+        </div>
+
+        <p class="italic text-gray-300 text-sm sm:text-base">
+            You can never leave my mind, even when i'm sleeping, or getting busy with life.
+        </p>
+
+        <button onclick="showMessage()"
+            class="mt-7 px-6 py-3 bg-pink-500 hover:bg-pink-600 transition rounded-2xl shadow-lg font-semibold">
+            One More Thing...
+        </button>
+
+        <p id="message" class="hidden mt-6 text-xl font-semibold text-pink-200 leading-relaxed">
+            I wanted you yesterday.<br>
+            I want you today.<br>
+            I’ll want you tomorrow.<br><br>
+
+            And somehow...<br>
+            every moment in between feels incomplete without you.
+        </p>
+
+    </div>
+
+    <script>
+        function showMessage() {
+
+            document.getElementById("message").classList.remove("hidden");
+
+            confetti({
+                particleCount: 120,
+                spread: 80,
+                origin: { y: 0.6 }
+            });
+
+            setTimeout(() => {
+                confetti({
+                    particleCount: 80,
+                    spread: 120,
+                    origin: { x: 0.1 }
+                });
+
+                confetti({
+                    particleCount: 80,
+                    spread: 120,
+                    origin: { x: 0.9 }
+                });
+            }, 300);
+        }
+    </script>
+
+</body>
+
+</html>
